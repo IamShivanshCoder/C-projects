@@ -1,0 +1,29 @@
+Number to Words – Convert integers like 123 → "one hundred twenty three". Good for arrays of strings and logic.
+
+
+program flow 
+
+.if 0 or negative print so instructuions or convert to positive
+
+then convert the number into chunks and save them into arrays chunks
+for ex: 1,234,567
+chunk[0] = 567
+chunk[1] = 234
+chunk[2] = 1
+chunk = {567.234.1}
+if can get by %1000 and then /1000;
+
+#Resemble with scale words 
+Process chunks from biggest to smallest, appending the scale word:
+chunk[2] → convertHundreds(1)  + "million"
+chunk[1] → convertHundreds(234) + "thousand"
+chunk[0] → convertHundreds(567)
+Final result: "one million two hundred thirty four thousand five hundred sixty seven"
+
+convertHundreds() _> core of program 
+converts a set of no. between 1 and 999 into thier respective word form 
+some special cases in it 
+>1 to 19 can be handled by matrix array in ones() function  
+>20,30,....  handletens function tens() 
+>100000001 -> zero chunks no case for zero 
+
